@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-16">
-      <div className="max-w-5xl mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-[1fr,300px] gap-12 items-center">
-          <div className="order-2 md:order-1">
+    <section className="flex items-center pt-16">
+      <div className="max-w-5xl mx-auto px-6 py-20 w-full">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+          <div className="flex-1 text-center md:text-left">
             <p className="text-muted-foreground mb-4">Hi, my name is</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
               Akash Ojha
@@ -16,13 +16,13 @@ export function Hero() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-muted-foreground mb-6">
               I build things for the web.
             </h2>
-            <p className="text-muted-foreground max-w-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground max-w-lg mb-8 leading-relaxed mx-auto md:mx-0">
               Senior Software Engineer with 8+ years of experience building
               scalable applications and optimizing performance across
               telecommunications, construction, logistics, and finance domains.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-4 mb-8 justify-center md:justify-start">
               <Button asChild>
                 <Link href="#contact">Get in touch</Link>
               </Button>
@@ -31,7 +31,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 justify-center md:justify-start">
               <Link
                 href="https://github.com/ojhakash"
                 target="_blank"
@@ -60,9 +60,8 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="order-1 md:order-2 flex justify-center md:justify-end">
-            <div className="relative w-48 h-48 md:w-64 md:h-64">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-zinc-700 to-zinc-900 -z-10 blur-2xl opacity-50" />
+          <div className="flex-shrink-0">
+            <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">
               <Image
                 src="/akash.jpg"
                 alt="Akash Ojha"
